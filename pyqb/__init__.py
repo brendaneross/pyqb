@@ -129,10 +129,8 @@ class Client():
             database = self.database
 
         if fields is not None:
-            # fids = [str(x) for x in fields]
-            # req["clist"] = ".".join(fids)
-            # changed this to just accept a period separated list
-            req["clist"] = fields
+            fids = [str(x) for x in fields]
+            req["clist"] = ".".join(fids)
         else:
             req["clist"] = "a"
 
